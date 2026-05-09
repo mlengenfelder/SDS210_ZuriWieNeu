@@ -1,0 +1,16 @@
+# Ignore all data (Raw and Processed)
+data/
+
+# Ignore all final exports
+outputs/
+
+# Ignore system "junk" (prevents Mac/Windows conflict files)
+.DS_Store
+Thumbs.db
+
+# Ignore Jupyter temporary files (prevents "ghost" files in your sidebar)
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Ignore Python cache (speeds things up)
+__pycache__/
