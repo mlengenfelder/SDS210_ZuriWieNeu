@@ -1,2 +1,5 @@
-import geopandas as gpd
-print(f"GeoPandas is ready! Version: {gpd.__version__}")
+# In scripts/data_utils.py
+def test_connection():
+    return "Helper script is successfully connected to the Notebook!"
+
+
