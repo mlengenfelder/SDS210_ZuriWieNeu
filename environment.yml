@@ -1,0 +1,17 @@
+name: SDS210
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - numpy
+  - pandas
+  - geopandas
+  - matplotlib
+  - scikit-learn
+  - folium
+  - shapely
+  - pyogrio          # fast GPKG reader used by geopandas read_file
+  - jupyterlab
+  - ipykernel
+  - ipywidgets       # needed for display() in notebooks
