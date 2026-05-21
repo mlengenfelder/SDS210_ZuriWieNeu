@@ -1,17 +1,20 @@
-name: SDS210
+name: SDS210_ZuriWieNeu
 channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.12
-  - numpy
-  - pandas
-  - geopandas
-  - matplotlib
-  - scikit-learn
-  - folium
-  - shapely
-  - pyogrio          # fast GPKG reader used by geopandas read_file
+  # Kern-Python und Jupyter-Infrastruktur
+  - python=3.11
   - jupyterlab
   - ipykernel
-  - ipywidgets       # needed for display() in notebooks
+
+  # Datenverarbeitung & Analyse (Schnelles Laden, Tabellen, DBSCAN)
+  - pandas
+  - geopandas
+  - (pyogrio)          # Beschleunigt das Laden von gpkg-Dateien extrem
+  - scikit-learn
+
+  # Visualisierung & Interaktive Karten
+  - matplotlib
+  - folium
+  - mapclassify      # Zwingend notwendig für geopandas.explore()
