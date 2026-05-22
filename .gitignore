@@ -1,25 +1,16 @@
-# Ignore all raw data
-data/*
-!data/.gitkeep
-!data/README.md
+# Ignore all data (Raw and Processed)
+data/
 
-# Ignore processed data, but keep the folder
-data/processed/*
-!data/processed/.gitkeep
+# Ignore all final exports
+outputs/
 
-# Ignore outputs, but keep the folder structure
-outputs/*
-!outputs/.gitkeep
-!outputs/figures/.gitkeep
-!outputs/data/.gitkeep
-
-# Ignore system junk
+# Ignore system "junk" (prevents Mac/Windows conflict files)
 .DS_Store
 Thumbs.db
 
-# Ignore Jupyter temp files
+# Ignore Jupyter temporary files (prevents "ghost" files in your sidebar)
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
 
-# Ignore Python cache
+# Ignore Python cache (speeds things up)
 __pycache__/
