@@ -16,17 +16,17 @@ The raw data is not included in this repository. Please download the data from t
 
 ### Step 1: Clone the Repository
 First, download this repository to your local computer and enter the directory:
-'''bash
-cd ~/Desktop
-git clone https://github.com/mlengenfelder/SDS210_ZuriWieNeu
-cd SDS210_ZuriWieNeu
-'''
+
+* cd ~/Desktop
+* git clone https://github.com/mlengenfelder/SDS210_ZuriWieNeu
+* cd SDS210_ZuriWieNeu
 
 ### Step 2: Create and Activate the Environment
-conda env create -f environment.yml
-conda activate zuriwieneu_env
 
-### Step 3: Initialize the Directory Tree
+* conda env create -f environment.yml
+* conda activate zuriwieneu_env
+
+### Step 3: Initialize the Directory Structure
 * Open your Jupyter environment, open the notebook ZuriWieNeu_Spatial_Analysis.ipynb, select zuriwieneu_env as your kernel, and run the very first setup cell (Section 1).
 * Running this cell automatically creates the local folder path structure (data/raw/, data/processed/, outputs/figures/, etc.) that is missing from the repository.
 
@@ -46,4 +46,4 @@ Finally, move both renamed folders into your newly generated project folder:
 * Ensure your notebook kernel is set to zuriwieneu_env.
 * Run the remaining cells sequentially from top to bottom (Cell-wise is highly recommended).
 * Custom helper functions (such as CRS handling, frustration flagging, and DBSCAN clustering) are imported automatically from the local utils.py file.
-* All outputs (interactive maps, plots, and metrics) will be saved in the outputs/ and data / processed. 
+* All outputs (interactive maps, plots, and metrics) will be saved in outputs/ and data / processed. 
