@@ -12,42 +12,38 @@ The raw data is not included in this repository. Please download the data from t
 **ZüriWieNeu Reports:** 
 [Download here](https://www.stadt-zuerich.ch/geodaten/download/Zueri_wie_neu?format=10005)
 
-**Data Setup:** 
+##  Setup Instructions
+
+### Step 1: Clone the Repository
+First, download this repository to your local computer and enter the directory:
+'''bash
+cd ~/Desktop
+git clone https://github.com/mlengenfelder/SDS210_ZuriWieNeu
+cd SDS210_ZuriWieNeu
+'''
+
+### Step 2: Create and Activate the Environment
+conda env create -f environment.yml
+conda activate zuriwieneu_env
+
+### Step 3: Initialize the Directory Tree
+* Open your Jupyter environment, open the notebook ZuriWieNeu_Spatial_Analysis.ipynb, select zuriwieneu_env as your kernel, and run the very first setup cell (Section 1).
+* Running this cell automatically creates the local folder path structure (data/raw/, data/processed/, outputs/figures/, etc.) that is missing from the repository.
+
+### Step 4: Download and Position the Raw Data
+Now that the paths exist, download the raw data from the Open Data Portal Zurich. Access the links above in the Data source section. 
+
 Rename the whole, downloaded folder accordingly:
 * The Statistische Quartiere to: **Quartiere_ZH_GPKG**
 * The Reports to: **Reports_GPKG**
 
-##  Setup Instructions
-First, download the linked GitHub repository to your computer:
+Finally, move both renamed folders into your newly generated project folder:
 
-'''bash
-git clone .git
-'''
-
-To ensure maximum reproducibility, an `environment.yml` is provided. Create and activate the conda environment via:
-
-'''bash
-conda env create -f environment.yml
-conda activate zuriwieneu_env
-'''
-
-git clone https://github.com/mlengenfelder/SDS210_ZuriWieNeu
-cd <your-repo>
-conda env create -f environment.yml
-conda activate zuriwieneu_env
-
-Place the two downloaded folders into:
-
-`SDS210_ZuriWieNeu/data/raw/`
-
-Rename them exactly like this:
-
-* `Reports_GPKG`
-* `Quartiere_ZH_GPKG`
+* SDS210_ZuriWieNeu/data/raw/
 
 ## Execution Order
-
 * Open the ZuriWieNeu_Spatial_Analysis.ipynb notebook.
-* Run the notebook sequentially from top to bottom or as a whole (Restart & Run All, step-wise is recommended).
-* The custom helper functions are imported automatically from utils.py.
+* Ensure your notebook kernel is set to zuriwieneu_env.
+* Run the remaining cells sequentially from top to bottom (Cell-wise is highly recommended).
+* Custom helper functions (such as CRS handling, frustration flagging, and DBSCAN clustering) are imported automatically from the local utils.py file.
 * All outputs (interactive maps, plots, and metrics) will be saved in the outputs/ and data / processed. 

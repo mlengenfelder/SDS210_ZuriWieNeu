@@ -231,7 +231,7 @@ def summary_questions(final_reports_gdf, final_quartiere_gdf, cluster_polygons):
     print('=' * 55)
     print(f'Analysed Reports:                            {len(final_reports_gdf):>10,}')
     print(f'Time period:                                2013 – 2025')
-    print(f'Quartiers covered:                           {final_quartiere_gdf["qname"].nunique():>10}')
+    print(f'Quartiere covered:                           {final_quartiere_gdf["qname"].nunique():>10}')
     print()
 
     top_density = final_quartiere_gdf.nlargest(1, 'reports_per_km2').iloc[0]
@@ -240,12 +240,12 @@ def summary_questions(final_reports_gdf, final_quartiere_gdf, cluster_polygons):
     print()
 
     top_cat = final_quartiere_gdf['top_category'].value_counts().idxmax()
-    print(f'Q2 – Dominant Problem category:     {top_cat}')
+    print(f'Q2 – Dominant Problem-Category:     {top_cat}')
     print()
 
     top_frust = final_quartiere_gdf.nlargest(1, 'frustration_rate').iloc[0]
     n_clusters = len(cluster_polygons)
-    print(f'Q3 – Highest Frustration rate:          {top_frust["qname"]} ({top_frust["frustration_rate"]}%)')
+    print(f'Q3 – Highest frustration-Rate:          {top_frust["qname"]} ({top_frust["frustration_rate"]}%)')
     print(f'     DBSCAN:         {n_clusters} Frustration-Clusters identified')
     print()
 
