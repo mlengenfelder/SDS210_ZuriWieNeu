@@ -1,20 +1,17 @@
-name: SDS210_ZuriWieNeu
+name: zuriwieneu_env
 channels:
   - conda-forge
   - defaults
 dependencies:
-  # Kern-Python und Jupyter-Infrastruktur
   - python=3.11
-  - jupyterlab
-  - ipykernel
-
-  # Datenverarbeitung & Analyse (Schnelles Laden, Tabellen, DBSCAN)
   - pandas
   - geopandas
-  - (pyogrio)          # Beschleunigt das Laden von gpkg-Dateien extrem
+  - numpy
   - scikit-learn
-
-  # Visualisierung & Interaktive Karten
   - matplotlib
   - folium
-  - mapclassify      # Zwingend notwendig für geopandas.explore()
+  - mapclassify
+  - pyogrio
+  - jupyterlab
+  - ipykernel
+  - ipywidgets
